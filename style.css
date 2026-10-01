@@ -1,0 +1,121 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f5f5dc;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-text {
+    flex-grow: 1;
+}
+
+.header-text h1 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.header-text h2 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.header-text p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.mockup-label {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.student-photo {
+    width: 120px;
+    height: 150px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 14px;
+    min-width: 100px;
+    background-color: #e6dabe;
+}
+
+.top-nav a.active {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.main-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.left-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    align-items: center;
+}
+
+.left-nav a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #e6dabe;
+}
+
+.content {
+    flex-grow: 1;
+    border: 1px solid black;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #ffffff;
+}
