@@ -33,39 +33,110 @@
 
     <div class="main-layout">
         <aside class="left-nav">
-            <a href="#">Тема Мета Місце<br>розташування сайту, звіту</a>
-            <a href="#">Опис предметного середовища.<br>Опис бізнес-логіки</a>
-            <a href="#">Структура документа</a>
-            <a href="#" class="sub-item">HTML-код ТАБЛИЦІ</a>
-            <a href="#" class="sub-item">HTML-код ЗОБРАЖЕННЯ</a>
-            <a href="#" class="sub-item">HTML-код ФОРМИ</a>
-            <a href="#" class="sub-item">HTML-код ...</a>
-            <a href="#">Головна сторінка WEB-застосунку</a>
-            <a href="#">Код головної сторінки WEB-<br>застосунку</a>
-            <a href="#">ВИСНОВКИ</a>
+            <a href="#section-info">Тема Мета Місце<br>розташування сайту, звіту</a>
+            <a href="#section-logic">Опис предметного середовища.<br>Опис бізнес-логіки</a>
+            <a href="#section-table" class="sub-item">HTML-код ТАБЛИЦІ</a>
+            <a href="#section-image" class="sub-item">HTML-код ЗОБРАЖЕННЯ</a>
+            <a href="#section-list" class="sub-item">HTML-код СПИСКІВ</a>
+            <a href="#section-form" class="sub-item">HTML-код ФОРМИ</a>
+            <a href="#section-conclusion">ВИСНОВКИ</a>
         </aside>
 
         <main class="content" id="main-content">
-            <div class="report-section">
+            
+            <div id="section-info" class="report-section">
                 <h2>Тема, Мета, Місце розташування сайту та звіту</h2>
-                
                 <h3>Тема:</h3>
                 <p>ТЕГИ ТА АТРИБУТИ HTML-ДОКУМЕНТА. СТРУКТУРНА РОЗМІТКА. GIT. GITHUB. РОБОТА З РЕПОЗИТОРІЯМИ. ОПИС ЛОГІКИ ВЛАСНОГО WEB-ЗАСТОСУНКУ.</p>
-                
                 <h3>Мета:</h3>
-                <p>Придбати практичні навички роботи з GitHub, репозиторіями, HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт.</p>
-                
+                <p>Придбати практичні навички роботи з GitHub, репозиторіями, HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документа.</p>
                 <h3>Місце розташування:</h3>
                 <ul>
-                    <li><b>Посилання на живу сторінку звітного HTML-документа:</b> <a href="https://ch0tkiy-gus.github.io/IA-44_appRECORD-ButsykBogdan-FIOT-2026/" target="_blank">https://ch0tkiy-gus.github.io/IA-44_appRECORD-ButsykBogdan-FIOT-2026/</a></li>
-                    <li><b>Посилання на репозиторій звітного HTML-документа:</b> <a href="https://github.com/Ch0tkiy-Gus/IA-44_appRECORD-ButsykBogdan-FIOT-2026" target="_blank">https://github.com/Ch0tkiy-Gus/IA-44_appRECORD-ButsykBogdan-FIOT-2026</a></li>
-                    
-                    <li><b>Посилання на репозиторій власного WEB-застосунку:</b> (додати посилання)</li>
-                    <li><b>Посилання на живу сторінку власного WEB-застосунку:</b> (додати посилання)</li>
-                    <li><b>Посилання на репозиторій з самостійними роботами:</b> (додати посилання)</li>
-                    <li><b>Посилання на живу сторінку з самостійними роботами:</b> (додати посилання)</li>
+                    <li><b>Посилання на репозиторій звітного документа:</b> <a href="https://github.com/Ch0tkiy-Gus/IA-44_appRECORD-ButsykBogdan-FIOT-2026" target="_blank">Перейти до репозиторію звіту</a></li>
+                    <li><b>Посилання на живу сторінку звіту:</b> <a href="https://ch0tkiy-gus.github.io/IA-44_appRECORD-ButsykBogdan-FIOT-2026/" target="_blank">Перейти на сторінку звіту</a></li>
+                    <li><b>Посилання на репозиторій WEB-застосунку:</b> <a href="https://github.com/Ch0tkiy-Gus/IA-44_appWEB-ButsykBogdan-FIOT-2026" target="_blank">Перейти до репозиторію застосунку</a></li>
+                    <li><b>Посилання на живу сторінку WEB-застосунку:</b> <a href="https://ch0tkiy-gus.github.io/IA-44_appWEB-ButsykBogdan-FIOT-2026/" target="_blank">Перейти на сторінку застосунку</a></li>
                 </ul>
             </div>
+
+            <div id="section-logic" class="report-section">
+                <h2>Опис предметного середовища та бізнес-логіки</h2>
+                <p><b>Предметна галузь:</b> Платформа для публікації та завантаження користувацьких модифікацій (модів) для відеоігор. Застосунок є каталогом з можливістю пошуку, фільтрації та перегляду деталей модифікацій.</p>
+                <p><b>Бізнес-логіка:</b> Користувач відкриває головну сторінку -> використовує навігацію або пошукову форму для знаходження моду -> переглядає детальну сторінку з характеристиками (таблиця) -> завантажує файл.</p>
+            </div>
+
+            <div id="section-table" class="report-section">
+                <h2>HTML-код ТАБЛИЦІ</h2>
+                <h3>Теорія</h3>
+                <p>Для створення таблиць використовується тег <code>&lt;table&gt;</code>. Рядки створюються тегом <code>&lt;tr&gt;</code>, заголовки стовпців — <code>&lt;th&gt;</code>, а звичайні комірки даних — <code>&lt;td&gt;</code>. Основні атрибути: <code>border</code> (рамка), <code>colspan</code> (об'єднання стовпців), <code>rowspan</code> (об'єднання рядків).</p>
+                <h3>Скріншот</h3>
+                <img src="image/screen-table.jpg" alt="Скріншот таблиці" style="max-width: 100%; border: 1px solid #ccc;">
+                <h3>Код</h3>
+<pre style="background: #f4f4f4; padding: 10px; font-size: 14px; overflow-x: auto;">
+&lt;table class="mod-table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Характеристика&lt;/th&gt;
+            &lt;th&gt;Значення&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Версія моду&lt;/td&gt;
+            &lt;td&gt;v1.4.2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+            </div>
+
+            <div id="section-image" class="report-section">
+                <h2>HTML-код ЗОБРАЖЕННЯ</h2>
+                <h3>Теорія</h3>
+                <p>Для вставки зображень використовується одинарний тег <code>&lt;img&gt;</code>. Обов'язкові атрибути: <code>src</code> (шлях до файлу) та <code>alt</code> (альтернативний текст). Також використовуються <code>width</code> та <code>height</code> для розмірів.</p>
+                <h3>Скріншот</h3>
+                <img src="image/screen-img.jpg" alt="Скріншот зображення" style="max-width: 100%; border: 1px solid #ccc;">
+                <h3>Код</h3>
+<pre style="background: #f4f4f4; padding: 10px; font-size: 14px; overflow-x: auto;">
+&lt;img src="image/logo.jpg" alt="Банер ігрового каталогу" class="hero-image"&gt;
+</pre>
+            </div>
+
+            <div id="section-list" class="report-section">
+                <h2>HTML-код СПИСКІВ</h2>
+                <h3>Теорія</h3>
+                <p>Існують маркіровані списки <code>&lt;ul&gt;</code> та нумеровані <code>&lt;ol&gt;</code>. Кожен елемент списку обгортається тегом <code>&lt;li&gt;</code>. Для нумерованих списків застосовують атрибут <code>type</code> для зміни стилю нумерації.</p>
+                <h3>Скріншот</h3>
+                <img src="image/screen-list.jpg" alt="Скріншот списку" style="max-width: 100%; border: 1px solid #ccc;">
+                <h3>Код</h3>
+<pre style="background: #f4f4f4; padding: 10px; font-size: 14px; overflow-x: auto;">
+&lt;ul&gt;
+    &lt;li&gt;Інтерфейс&lt;/li&gt;
+    &lt;li&gt;Геймплей&lt;/li&gt;
+    &lt;li&gt;Графіка&lt;/li&gt;
+    &lt;li&gt;Звук&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+            </div>
+
+            <div id="section-form" class="report-section">
+                <h2>HTML-код ФОРМИ</h2>
+                <h3>Скріншот</h3>
+                <img src="image/screen-form.jpg" alt="Скріншот форми" style="max-width: 100%; border: 1px solid #ccc;">
+                <h3>Код</h3>
+<pre style="background: #f4f4f4; padding: 10px; font-size: 14px; overflow-x: auto;">
+&lt;form class="search-form" action="#" method="GET"&gt;
+    &lt;input type="text" name="query" placeholder="Пошук модів..."&gt;
+    &lt;button type="submit"&gt;Знайти&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+            </div>
+
+            <div id="section-conclusion" class="report-section">
+                <h2>ВИСНОВКИ</h2>
+                <p>Під час виконання першої лабораторної роботи я набув практичних навичок роботи з системою контролю версій Git та платформою GitHub. Було успішно створено репозиторії для звітного документа та власного WEB-застосунку, а також налаштовано їх хостинг за допомогою GitHub Pages. Я розробив структуру веб-каталогу ігрових модифікацій, застосувавши на практиці основні HTML-теги для роботи з текстом, зображеннями, таблицями, формами та списками. Крім того, я навчився відокремлювати контент від оформлення за допомогою CSS та створювати семантично правильну розмітку сторінки.</p>
+            </div>
+
         </main>
     </div>
 </body>
