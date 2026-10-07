@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіт з ЛР №2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+            <h2>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</h2>
+            <p>Виконавець: Студент групи ІА-44 _______ Буцик Богдан</p>
+        </div>
+        <div>
+            <div class="mockup-label">Орієнтовний макет</div>
+            <div class="student-photo">ФОТО<br>студента</div>
+        </div>
+    </header>
+
+    <nav class="top-nav">
+        <a href="index.html">Лабораторна<br>робота №1</a>
+        <a href="lab2.html" class="active">Лабораторна<br>робота №2</a>
+        <a href="#">Лабораторна<br>робота №3</a>
+        <a href="#">Лабораторна<br>робота №4</a>
+        <a href="#">Лабораторна<br>робота №5</a>
+        <a href="#">Лабораторна<br>робота №6</a>
+        <a href="#">Лабораторна<br>робота №7</a>
+        <a href="#">Лабораторна<br>робота №8</a>
+        <a href="#">Лабораторна<br>робота №9</a>
+    </nav>
+
+    <div class="main-layout">
+        <aside class="left-nav">
+            <a href="#section-info">Тема, мета ЛР №2 Місце<br>розташування сайту, звіту</a>
+            <a href="#section-methods">Способи підключення стилів</a>
+            <a href="#section-selectors" style="background-color: #ddd; font-weight: bold; cursor: default;">СЕЛЕКТОРИ</a>
+            <a href="#section-tag" class="sub-item">Селектори тегу</a>
+            <a href="#section-class" class="sub-item">Селектори класу</a>
+            <a href="#section-id" class="sub-item">Селектори ідентифікаторів</a>
+            <a href="#section-other" class="sub-item">Інші селектори</a>
+            <a href="#section-advanced">CSS: Шрифти Текст<br>Таблиці Фон Контур<br>Списки CSS Просунутий</a>
+            <a href="#section-conclusion">ВИСНОВКИ до ЛР №2</a>
+        </aside>
+
+        <main class="content" id="main-content">
+            
+            <div id="section-info" class="report-section">
+                <h2>Тема, Мета, Місце розташування сайту та звіту</h2>
+                <h3>Тема:</h3>
+                <p>КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ ТЕГУ, КЛАСУ, ІДЕНТИФІКАТОРА. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.</p>
+                <h3>Мета:</h3>
+                <p>Придбати практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішніми та внутрішніми відступами, оформленням текстових елементів.</p>
+                <h3>Місце розташування:</h3>
+                <ul>
+                    <li><b>Посилання на репозиторій звітного документа:</b> <a href="https://github.com/Ch0tkiy-Gus/IA-44_appRECORD-ButsykBogdan-FIOT-2026" target="_blank">Перейти</a></li>
+                    <li><b>Посилання на живу сторінку звіту:</b> <a href="https://ch0tkiy-gus.github.io/IA-44_appRECORD-ButsykBogdan-FIOT-2026/lab2.html" target="_blank">Перейти</a></li>
+                    <li><b>Посилання на репозиторій WEB-застосунку:</b> <a href="https://github.com/Ch0tkiy-Gus/IA-44_appWEB-ButsykBogdan-FIOT-2026" target="_blank">Перейти</a></li>
+                    <li><b>Посилання на живу сторінку WEB-застосунку:</b> <a href="https://ch0tkiy-gus.github.io/IA-44_appWEB-ButsykBogdan-FIOT-2026/" target="_blank">Перейти</a></li>
+                </ul>
+            </div>
+
+            <div id="section-methods" class="report-section">
+                <h2>Способи підключення стилів</h2>
+                <p>В HTML існує 3 способи підключення CSS:</p>
+                <ol>
+                    <li><b>Внутрішні (inline):</b> використання атрибута <code>style="..."</code> безпосередньо в тегу.</li>
+                    <li><b>Глобальні (internal):</b> розміщення CSS-коду всередині тегу <code>&lt;style&gt;</code> в блоці <code>&lt;head&gt;</code>.</li>
+                    <li><b>Зовнішні (external):</b> підключення окремого файлу .css за допомогою тегу <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>. (Цей спосіб використовується в моєму WEB-застосунку).</li>
+                </ol>
+            </div>
+
+            <div id="section-selectors"></div> 
+
+            <div id="section-tag" class="report-section">
+                <h2>Селектори тегу</h2>
+                <p>Селектор тегу застосовує стилі до всіх вказаних HTML-тегів на сторінці.</p>
+                <h3>HTML-код</h3>
+<pre>&lt;body&gt; ... &lt;/body&gt;</pre>
+                <h3>CSS-код</h3>
+<pre>body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}</pre>
+                <img src="image/screen-tag.jpg" alt="Фон" style="max-width: 100%;">
+            </div>
+
+            <div id="section-class" class="report-section">
+                <h2>Селектори класу</h2>
+                <p>Селектор класу починається з крапки (<code>.</code>) і застосовується до елементів з відповідним атрибутом class.</p>
+                <h3>HTML-код</h3>
+<pre>&lt;main class="container"&gt; ... &lt;/main&gt;</pre>
+                <h3>CSS-код</h3>
+<pre>.container {
+    max-width: 1200px;
+    background-color: #ffffff;
+}</pre>
+                <img src="image/screen-class.jpg" alt="Скріншот контейнера" style="max-width: 100%; border: 1px solid #ccc;">
+            </div>
+
+            <div id="section-id" class="report-section">
+                <h2>Селектори ідентифікаторів</h2>
+                <p>Селектор ідентифікатора починається з решітки (<code>#</code>) і застосовується лише до одного унікального елемента з атрибутом id.</p>
+                <h3>HTML-код</h3>
+<pre>&lt;button type="submit" id="search-btn"&gt;Знайти&lt;/button&gt;</pre>
+                <h3>CSS-код</h3>
+<pre>#search-btn {
+    background-color: #2563eb;
+    color: white;
+}</pre>
+                <img src="image/screen-id.jpg" alt="Скріншот кнопки" style="max-width: 100%; border: 1px solid #ccc;">
+            </div>
+
+            <div id="section-other" class="report-section">
+                <h2>Інші селектори</h2>
+                <p><b>Універсальний (*):</b> <code>* { box-sizing: border-box; }</code> - застосовується до всіх елементів.</p>
+                <p><b>Дочірній (>):</b> <code>.main-nav > a { color: #555; }</code> - застосовується лише до прямих нащадків (посилань у меню).</p>
+                <p><b>Сусідній (+):</b> <code>.sidebar h2 + ul { margin-top: 15px; }</code> - застосовується до списку, що йде одразу після заголовка H2.</p>
+                <p><b>Атрибута ([]):</b> <code>input[type="text"] { border-radius: 4px; }</code> - застосовується до поля вводу.</p>
+            </div>
+
+            <div id="section-advanced" class="report-section">
+                <h2>CSS: Шрифти, Текст, Таблиці, Фон, Контур, Списки, CSS Просунутий</h2>
+                <p><b>Шрифти та текст:</b> Використано <code>font-family: 'Segoe UI'</code>, <code>font-weight: bold</code>, <code>color: #333</code>.</p>
+                <p><b>Фон:</b> Використано <code>background-color: #f8f9fa</code> для body.</p>
+                <p><b>Контур:</b> Для поля пошуку використано <code>outline: 2px solid #2563eb;</code> при натисканні (стан :focus).</p>
+                <p><b>Багаторівневі списки:</b> Застосовано <code>list-style-type: square</code> для батьківського списку категорій та <code>list-style-type: circle</code> для вкладеного (підкатегорії).</p>
+                <p><b>CSS Просунутий:</b> Для блоку .container додано тінь <code>box-shadow: 0 4px 15px rgba(0,0,0,0.05);</code>, а для кнопки пошуку — плавну анімацію кольору при наведенні <code>transition: background-color 0.3s ease;</code>.</p>
+            </div>
+
+            <div id="section-conclusion" class="report-section">
+                <h2>ВИСНОВКИ</h2>
+                <p>Під час виконання другої лабораторної роботи я набув практичних навичок роботи з каскадними таблицями стилів (CSS). Я успішно застосував селектори тегу, класу та ідентифікатора для зміни зовнішнього вигляду мого WEB-застосунку. Також на практиці було досліджено роботу складніших селекторів (дочірніх, сусідніх, селекторів атрибутів) та застосовано стильове оформлення шрифтів, кольорів, фонів, контурів і багаторівневих списків. Окрім цього, я ознайомився з просунутими властивостями CSS (box-shadow, transition).</p>
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>

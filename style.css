@@ -116,20 +116,49 @@ header {
     padding: 20px; 
 }
 
+.report-section {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #e0e0e0;
+    /* Це правило робить так, щоб якірні посилання (#) прокручували сторінку рівно до заголовка */
+    scroll-margin-top: 20px;
+}
+
 .report-section h2 {
     text-align: center;
     margin-top: 0;
+    color: #1f2937;
 }
 
 .report-section h3 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    color: #4b5563;
 }
 
-.report-section p {
+.report-section p, .report-section ol, .report-section ul {
     margin-top: 5px;
     text-align: justify;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
-.report-section ul {
-    line-height: 1.6;
+/* Красиве оформлення блоків з кодом (щоб не писати стилі прямо в HTML) */
+pre {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 15px;
+    font-size: 14px;
+    overflow-x: auto;
+    border-radius: 6px;
+    border: 1px solid #333;
+    font-family: Consolas, monospace;
+}
+
+code {
+    font-family: Consolas, monospace;
+    background-color: #f4f4f4;
+    color: #d63384;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 14px;
 }
