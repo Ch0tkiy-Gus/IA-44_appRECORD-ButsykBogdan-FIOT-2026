@@ -50,7 +50,12 @@ header {
     font-weight: bold;
     text-align: center;
     background-color: #ffffff;
+    width: 120px;
+    height: 150px;
+    border: 1px solid black;
+    object-fit: cover; 
 }
+
 
 .top-nav {
     display: flex;
@@ -88,6 +93,9 @@ header {
     gap: 15px;
     width: 300px;
     align-items: center;
+    position: sticky;
+    top: 20px; 
+    height: fit-content;
 }
 
 .left-nav a {
@@ -120,7 +128,6 @@ header {
     margin-bottom: 50px;
     padding-bottom: 20px;
     border-bottom: 2px dashed #e0e0e0;
-    /* Це правило робить так, щоб якірні посилання (#) прокручували сторінку рівно до заголовка */
     scroll-margin-top: 20px;
 }
 
@@ -142,7 +149,6 @@ header {
     font-size: 16px;
 }
 
-/* Красиве оформлення блоків з кодом (щоб не писати стилі прямо в HTML) */
 pre {
     background-color: #1e1e1e;
     color: #d4d4d4;
