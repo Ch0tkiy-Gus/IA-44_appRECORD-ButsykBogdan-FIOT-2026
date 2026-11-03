@@ -44,16 +44,8 @@ header {
     width: 120px;
     height: 150px;
     border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    text-align: center;
-    background-color: #ffffff;
-    width: 120px;
-    height: 150px;
-    border: 1px solid black;
     object-fit: cover; 
+    background-color: #ffffff;
 }
 
 
