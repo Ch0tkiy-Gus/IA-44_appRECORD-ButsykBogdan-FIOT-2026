@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Гумова блокова верстка (Варіант 3)</title>
+    <style>
+        body { margin: 0; padding: 20px; background-color: #f0f0f0; font-family: sans-serif; font-weight: bold; font-size: 24px; text-align: center; }
+        .wrapper { width: 100%; margin: 0 auto; background: white; border: 2px solid #999; box-shadow: 5px 5px 0px #ccc; }
+        .wrapper * { box-sizing: border-box; }
+        .header { background-color: #ffcc00; height: 60px; line-height: 60px; border-bottom: 2px solid #000; position: relative; }
+        .white-box { background-color: white; border: 1px solid #000; width: 150px; height: 30px; position: absolute; left: 10px; top: 10px; }
+        .content-area { overflow: hidden; }
+        .sidebar-left { float: left; width: 25%; height: 400px; background-color: #2b65ec; color: white; border-right: 2px solid #000; line-height: 400px; }
+        .sidebar-right { float: right; width: 25%; height: 400px; background-color: #2b65ec; color: white; border-left: 2px solid #000; line-height: 400px; }
+        .main { float: left; width: 50%; height: 400px; padding: 10px; }
+        .red-block { background-color: #ff4040; height: 50px; border: 1px solid #000; }
+        .content-block { height: 260px; border: 1px solid #ccc; line-height: 260px; margin: 10px 0; }
+        .footer { clear: both; background-color: #ffcc00; height: 60px; line-height: 60px; border-top: 2px solid #000; }
+    </style>
+</head>
+<body>
+    <h2>Гумова блокова верстка (Ширина: 100%)</h2>
+    <div class="wrapper">
+        <div class="header">
+            <div class="white-box"></div>
+            1
+        </div>
+        <div class="content-area">
+            <div class="sidebar-left">2</div>
+            <div class="sidebar-right">4</div>
+            <div class="main">
+                <div class="red-block"></div>
+                <div class="content-block">3</div>
+                <div class="red-block"></div>
+            </div>
+        </div>
+        <div class="footer">5</div>
+    </div>
+</body>
+</html>

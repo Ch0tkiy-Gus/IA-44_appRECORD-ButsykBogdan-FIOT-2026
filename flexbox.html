@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3 - Flexbox Верстка (Варіант 1)</title>
+    <style>
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; color: #333; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 50px 0; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #000; }
+
+        .top-nav { background-color: #000; padding: 15px 0; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        .nav-select { background-color: #333; color: #fff; padding: 8px 20px; border: none; border-radius: 4px; font-weight: bold; font-size: 1.1rem; cursor: pointer; }
+
+        .target-audience { background-color: #fff; border-bottom: 2px solid #eee; }
+        .cards-row { display: flex; gap: 20px; justify-content: space-between; }
+        .card { flex: 1; text-align: center; padding: 20px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; }
+        .card-img-wrap { width: 100%; height: 180px; overflow: hidden; border-radius: 10px; margin-bottom: 20px; position: relative; }
+
+        .card-img-wrap::before { content: ''; position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border: 3px solid #0056b3; border-radius: 15px; clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%); z-index: 2; pointer-events: none; }
+        .card img { width: 100%; height: 100%; object-fit: cover; clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%); }
+        .card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .card p { font-size: 0.9rem; color: #666; }
+        
+        .card:nth-child(1) .card-img-wrap, .card:nth-child(3) .card-img-wrap { order: 2; margin-top: 20px; margin-bottom: 0; }
+        .card:nth-child(1) h3, .card:nth-child(3) h3 { order: 0; }
+        .card:nth-child(1) p, .card:nth-child(3) p { order: 1; }
+
+        .learning-process { background-color: #f4f4f4; }
+        .process-row { display: flex; gap: 30px; justify-content: space-between; }
+        .process-img { flex: 1; height: 250px; position: relative; }
+        .process-img::before { content: ''; position: absolute; top: -5px; left: -5px; right: -5px; bottom: -5px; border: 3px solid #0056b3; clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%); pointer-events: none; z-index: 2;}
+        .process-img img { width: 100%; height: 100%; object-fit: cover; clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%); }
+
+        .partners { background-color: #fff; padding-bottom: 80px; }
+        .partner-box { display: flex; align-items: center; gap: 50px; max-width: 1000px; margin: 0 auto; }
+        .partner-logo { flex: 0 0 350px; background: #fff; padding: 40px; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); border-left: 5px solid #0056b3; display: flex; justify-content: center; align-items: center; }
+        .partner-logo img { width: 100%; max-width: 250px; }
+        .partner-text { flex: 1; }
+        .partner-text h3 { font-size: 1.8rem; margin-bottom: 15px; font-weight: normal; }
+        .partner-text p { margin-bottom: 15px; color: #555; }
+        .partner-text a { color: #00bcd4; text-decoration: none; font-weight: bold; }
+
+        @media (max-width: 992px) {
+            .cards-row, .process-row { flex-wrap: wrap; }
+            .card, .process-img { flex: 0 0 calc(50% - 20px); }
+            .partner-box { flex-direction: column; text-align: center; }
+            .partner-logo { border-left: none; border-bottom: 5px solid #0056b3; flex: auto; width: 100%; max-width: 400px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .card, .process-img { flex: 0 0 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#">Форми навчання</a>
+                <a href="#">Заходи</a>
+                <a href="#">Про Академію</a>
+                <a href="#">Контакти</a>
+            </div>
+            <select class="nav-select">
+                <option>Київ</option>
+                <option>Львів</option>
+                <option>Одеса</option>
+            </select>
+        </div>
+    </nav>
+
+    <section class="target-audience">
+        <div class="container">
+            <h2>Для кого розроблена програма</h2>
+            <div class="cards-row">
+                <div class="card">
+                    <h3>Школярі та випускники (15-18 років)</h3>
+                    <p>отримають першу професію, не відкладаючи на потім свою мрію стати програмістом</p>
+                    <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=400&auto=format&fit=crop" alt="Студенти"></div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=400&auto=format&fit=crop" alt="Викладач"></div>
+                    <h3>Студенти ВНЗ (18-23 роки)</h3>
+                    <p>освоять другу спеціальність паралельно з університетською освітою.</p>
+                </div>
+                <div class="card">
+                    <h3>Представники інших професій (23-55 років)</h3>
+                    <p>яких не влаштовує поточна кар'єрна і фінансова перспектива, зможуть перевчитися на розробника ПЗ.</p>
+                    <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=400&auto=format&fit=crop" alt="Колеги"></div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrap"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=400&auto=format&fit=crop" alt="Аудиторія"></div>
+                    <h3>Всі бажаючі підвищити IT-кваліфікацію</h3>
+                    <p>систематизують свої знання і отримають робочі навички, затребувані сучасному ІТ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-process">
+        <div class="container">
+            <h2>Як проходить навчання</h2>
+            <div class="process-row">
+                <div class="process-img">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=500&auto=format&fit=crop" alt="Навчання 1">
+                </div>
+                <div class="process-img">
+                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=500&auto=format&fit=crop" alt="Навчання 2">
+                </div>
+                <div class="process-img">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=500&auto=format&fit=crop" alt="Навчання 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="container">
+            <h2>Партнери Академії</h2>
+            <div class="partner-box">
+                <div class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Luxoft_logo.svg" alt="Luxoft Logo">
+                </div>
+                <div class="partner-text">
+                    <h3>Luxoft</h3>
+                    <p><a href="#">Luxoft</a> – глобальна технологічна компанія, одна із лідерів на ринку послуг цифрової трансформації та створення програмних продуктів. Luxoft пропонує індивідуальні ІТ-рішення, які заохочують до змін у бізнесах клієнтів в усьому світі.</p>
+                    <p>Luxoft об'єднує понад 13 000 спеціалістів із 22 країн світу зі штаб-квартирою у м. Цуг, Швейцарія. Близько 3500 фахівців усіх ключових напрямків зосереджені в офісах Києва, Одеси і Дніпра.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

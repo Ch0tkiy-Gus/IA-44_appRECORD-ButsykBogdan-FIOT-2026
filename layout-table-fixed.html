@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Фіксована таблична верстка (Варіант 2)</title>
+    <style>
+        body { margin: 0; padding: 20px; background-color: #f0f0f0; }
+        .wrapper { width: 800px; margin: 0 auto; background: white; border: 2px solid #999; box-shadow: 5px 5px 0px #ccc; }
+        table { width: 100%; border-collapse: collapse; text-align: center; font-family: sans-serif; font-weight: bold; font-size: 24px; }
+        td { border: 1px solid #000; padding: 20px; }
+
+        .block-1, .block-5 { background-color: #ffcc00; height: 60px; } 
+        .block-2, .block-4 { background-color: #2b65ec; color: white; width: 200px; } 
+        .block-3-wrap { background-color: #ffffff; vertical-align: top; padding: 10px; } 
+        .red-block { background-color: #ff4040; height: 50px; margin-bottom: 10px; border: 1px solid #000; } 
+        .white-box { background-color: white; border: 1px solid #000; width: 150px; height: 30px; display: inline-block; float: left; margin-top: -5px; }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Фіксована таблична верстка (Ширина: 800px)</h2>
+    <div class="wrapper">
+        <table>
+            <tr>
+                <td colspan="3" class="block-1">
+                    <div class="white-box"></div>
+                    1
+                </td>
+            </tr>
+            <tr style="height: 400px;">
+                <td class="block-2">2</td>
+                <td class="block-3-wrap">
+                    <div class="red-block"></div>
+                    <div style="height: 300px; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center;">
+                        3
+                    </div>
+                </td>
+                <td class="block-4">4</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="block-5">5</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
